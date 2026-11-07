@@ -45,6 +45,15 @@ uvicorn main:app --reload
 - `GET /random-number` : 테스트용 랜덤 숫자 반환
 - `GET /echo?message=...` : 전달한 메시지 에코
 
+## 테스트
+
+의존성을 설치한 뒤 CI와 같은 검사를 실행합니다.
+
+```bash
+python -m compileall main.py
+pytest -q
+```
+
 ## 향후 GitHub 연습 아이디어
 
 - GitHub Actions 워크플로우 확장 (lint/test/build/deploy 분리)
